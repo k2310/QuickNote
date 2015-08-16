@@ -39,10 +39,10 @@ namespace QuickNote
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            saveUISettings();
+            saveSettings();
         }
 
-        private void saveUISettings()
+        private void saveSettings()
         {
            // Font
             Properties.Settings.Default.Font = textBox1.Font;
@@ -56,11 +56,19 @@ namespace QuickNote
            
            // WordWrap
            Properties.Settings.Default.WordWrap = textBox1.WordWrap;
+           
+            // Contents
+           saveContents();
 
            Properties.Settings.Default.Save();
         }
 
-        private void loadUISettings()
+        private void saveContents()
+        {
+            Properties.Settings.Default.Contents = textBox1.Text;
+        }
+
+        private void loadSettings()
         {
             // Window State & Size
             WindowState = Properties.Settings.Default.WindowState;
@@ -71,12 +79,25 @@ namespace QuickNote
 
             // WordWrap
             textBox1.WordWrap = Properties.Settings.Default.WordWrap;
+            ToolStripMenuItem item = (ToolStripMenuItem)menuStrip1.Items.Find("WordWrapWToolStripMenuItem", true)[0];
+            item.Checked = textBox1.WordWrap;
+
+            // Contents
+            textBox1.Text = Properties.Settings.Default.Contents;
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            loadUISettings();
+            loadSettings();
+        }
+
+        private void 常に前面にTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem item = (ToolStripMenuItem)sender;
+            this.TopMost = !this.TopMost;
+            item.Checked = this.TopMost;
+
         }
 
 

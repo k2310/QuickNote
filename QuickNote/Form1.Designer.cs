@@ -30,8 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.書式EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.右端で折り返すWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WordWrapWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.フォントEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.常に前面にTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バージョンVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
@@ -52,18 +53,19 @@
             // 書式EToolStripMenuItem
             // 
             this.書式EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.右端で折り返すWToolStripMenuItem,
-            this.フォントEToolStripMenuItem});
+            this.WordWrapWToolStripMenuItem,
+            this.フォントEToolStripMenuItem,
+            this.常に前面にTToolStripMenuItem});
             this.書式EToolStripMenuItem.Name = "書式EToolStripMenuItem";
             this.書式EToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.書式EToolStripMenuItem.Text = "書式(&O)";
             // 
-            // 右端で折り返すWToolStripMenuItem
+            // WordWrapWToolStripMenuItem
             // 
-            this.右端で折り返すWToolStripMenuItem.Name = "右端で折り返すWToolStripMenuItem";
-            this.右端で折り返すWToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.右端で折り返すWToolStripMenuItem.Text = "右端で折り返す(&W)";
-            this.右端で折り返すWToolStripMenuItem.Click += new System.EventHandler(this.右端で折り返すWToolStripMenuItem_Click);
+            this.WordWrapWToolStripMenuItem.Name = "WordWrapWToolStripMenuItem";
+            this.WordWrapWToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.WordWrapWToolStripMenuItem.Text = "右端で折り返す(&W)";
+            this.WordWrapWToolStripMenuItem.Click += new System.EventHandler(this.右端で折り返すWToolStripMenuItem_Click);
             // 
             // フォントEToolStripMenuItem
             // 
@@ -71,6 +73,13 @@
             this.フォントEToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.フォントEToolStripMenuItem.Text = "フォント(&F)...";
             this.フォントEToolStripMenuItem.Click += new System.EventHandler(this.フォントEToolStripMenuItem_Click);
+            // 
+            // 常に前面にTToolStripMenuItem
+            // 
+            this.常に前面にTToolStripMenuItem.Name = "常に前面にTToolStripMenuItem";
+            this.常に前面にTToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.常に前面にTToolStripMenuItem.Text = "常に前面に(&T)";
+            this.常に前面にTToolStripMenuItem.Click += new System.EventHandler(this.常に前面にTToolStripMenuItem_Click);
             // 
             // バージョンVToolStripMenuItem
             // 
@@ -119,7 +128,8 @@
         private System.Windows.Forms.ToolStripMenuItem 書式EToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem フォントEToolStripMenuItem;
         private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.ToolStripMenuItem 右端で折り返すWToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem WordWrapWToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 常に前面にTToolStripMenuItem;
     }
 }
 
