@@ -30,11 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.書式EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.右端で折り返すWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.フォントEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バージョンVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.右端で折り返すWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,10 +58,17 @@
             this.書式EToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.書式EToolStripMenuItem.Text = "書式(&O)";
             // 
+            // 右端で折り返すWToolStripMenuItem
+            // 
+            this.右端で折り返すWToolStripMenuItem.Name = "右端で折り返すWToolStripMenuItem";
+            this.右端で折り返すWToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.右端で折り返すWToolStripMenuItem.Text = "右端で折り返す(&W)";
+            this.右端で折り返すWToolStripMenuItem.Click += new System.EventHandler(this.右端で折り返すWToolStripMenuItem_Click);
+            // 
             // フォントEToolStripMenuItem
             // 
             this.フォントEToolStripMenuItem.Name = "フォントEToolStripMenuItem";
-            this.フォントEToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.フォントEToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.フォントEToolStripMenuItem.Text = "フォント(&F)...";
             this.フォントEToolStripMenuItem.Click += new System.EventHandler(this.フォントEToolStripMenuItem_Click);
             // 
@@ -76,19 +83,13 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox1.Location = new System.Drawing.Point(0, 27);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox1.Size = new System.Drawing.Size(635, 332);
             this.textBox1.TabIndex = 1;
-            // 
-            // 右端で折り返すWToolStripMenuItem
-            // 
-            this.右端で折り返すWToolStripMenuItem.Name = "右端で折り返すWToolStripMenuItem";
-            this.右端で折り返すWToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.右端で折り返すWToolStripMenuItem.Text = "右端で折り返す(&W)";
-            this.右端で折り返すWToolStripMenuItem.Click += new System.EventHandler(this.右端で折り返すWToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -97,9 +98,12 @@
             this.ClientSize = new System.Drawing.Size(635, 359);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("MS UI Gothic", 9F);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
