@@ -15,5 +15,22 @@ namespace QuickNote
         {
             InitializeComponent();
         }
+
+        private void フォントEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (fontDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK) 
+            {
+                textBox1.Font = fontDialog1.Font;
+
+            }
+
+        }
+
+        private void 右端で折り返すWToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.WordWrap = !(textBox1.WordWrap);
+        }
+
     }
 }
