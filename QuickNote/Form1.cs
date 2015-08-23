@@ -87,9 +87,16 @@ namespace QuickNote
 
         }
 
+        private void DisplayAppNameVersion()
+        {
+            System.Diagnostics.FileVersionInfo ver_info = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            this.Text = ver_info.ProductName + " Ver " + ver_info.ProductVersion;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             loadSettings();
+            DisplayAppNameVersion();
         }
 
         private void 常に前面にTToolStripMenuItem_Click(object sender, EventArgs e)
