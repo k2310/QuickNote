@@ -32,7 +32,7 @@
             this.書式EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WordWrapWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.フォントEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.常に前面にTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TopMostTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バージョンVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
@@ -55,7 +55,7 @@
             this.書式EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.WordWrapWToolStripMenuItem,
             this.フォントEToolStripMenuItem,
-            this.常に前面にTToolStripMenuItem});
+            this.TopMostTToolStripMenuItem});
             this.書式EToolStripMenuItem.Name = "書式EToolStripMenuItem";
             this.書式EToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.書式EToolStripMenuItem.Text = "書式(&O)";
@@ -74,12 +74,12 @@
             this.フォントEToolStripMenuItem.Text = "フォント(&F)...";
             this.フォントEToolStripMenuItem.Click += new System.EventHandler(this.フォントEToolStripMenuItem_Click);
             // 
-            // 常に前面にTToolStripMenuItem
+            // TopMostTToolStripMenuItem
             // 
-            this.常に前面にTToolStripMenuItem.Name = "常に前面にTToolStripMenuItem";
-            this.常に前面にTToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.常に前面にTToolStripMenuItem.Text = "常に前面に(&T)";
-            this.常に前面にTToolStripMenuItem.Click += new System.EventHandler(this.常に前面にTToolStripMenuItem_Click);
+            this.TopMostTToolStripMenuItem.Name = "TopMostTToolStripMenuItem";
+            this.TopMostTToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.TopMostTToolStripMenuItem.Text = "常に前面に(&T)";
+            this.TopMostTToolStripMenuItem.Click += new System.EventHandler(this.常に前面にTToolStripMenuItem_Click);
             // 
             // バージョンVToolStripMenuItem
             // 
@@ -129,7 +129,7 @@
         private System.Windows.Forms.ToolStripMenuItem フォントEToolStripMenuItem;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.ToolStripMenuItem WordWrapWToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 常に前面にTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TopMostTToolStripMenuItem;
     }
 }
 

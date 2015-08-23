@@ -46,18 +46,17 @@ namespace QuickNote
         {
            // Font
             Properties.Settings.Default.Font = textBox1.Font;
-
             // Window State & Size
            if (WindowState == FormWindowState.Normal)
                Properties.Settings.Default.Bounds = Bounds;
            else
                Properties.Settings.Default.Bounds = RestoreBounds;
            Properties.Settings.Default.WindowState = WindowState;
-           
            // WordWrap
            Properties.Settings.Default.WordWrap = textBox1.WordWrap;
-           
-            // Contents
+           // TopMost
+           Properties.Settings.Default.TopMost = this.TopMost;
+           // Contents
            saveContents();
 
            Properties.Settings.Default.Save();
@@ -73,17 +72,18 @@ namespace QuickNote
             // Window State & Size
             WindowState = Properties.Settings.Default.WindowState;
             Bounds = Properties.Settings.Default.Bounds;
-
             // Font
             textBox1.Font = Properties.Settings.Default.Font;
-
             // WordWrap
             textBox1.WordWrap = Properties.Settings.Default.WordWrap;
             ToolStripMenuItem item = (ToolStripMenuItem)menuStrip1.Items.Find("WordWrapWToolStripMenuItem", true)[0];
             item.Checked = textBox1.WordWrap;
-
             // Contents
             textBox1.Text = Properties.Settings.Default.Contents;
+            // TopMost
+            this.TopMost = Properties.Settings.Default.TopMost;
+            TopMostTToolStripMenuItem.Checked = this.TopMost;
+            
 
         }
 
